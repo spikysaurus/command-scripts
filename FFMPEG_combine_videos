@@ -1,0 +1,4 @@
+for f in *.mp4; do
+    echo "file '$f'" >> videos.txt;done
+ffmpeg -f concat -i videos.txt -c copy preview.mp4;
+done
